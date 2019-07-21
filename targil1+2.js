@@ -62,4 +62,19 @@ function mobilePhone(model,size,price,number)
   this.getNumber = function () {
     return this.number
   }
+  let _price = price
+  this.getPrice = () => { return _price }
+  this.setPrice = (newPrice) => { if (newPrice >= 0 && newPrice > _price) 
+  				{
+                                    _price = newPrice
+ 				 }}
+  let _model = model
+  this.getModel = () => { return _model }
+  this.setModel = (newModel) => { if (newModel.length >= 4)
+                                    {
+					_model = newModel
+                                    }
+                                }
+  
 }
+
