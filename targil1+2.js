@@ -56,9 +56,9 @@ function CreateMobilePhone(model,size,price,number)
 
 function mobilePhone(model,size,price,number)
 {
-  this.model = model
+ // this.model = model
   this.size = size
-  this.price = price
+ // this.price = price
   this.getNumber = function () {
     return this.number
   }
