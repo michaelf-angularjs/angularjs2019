@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>AngularJS</title>
+    <script src="angular.js"></script>
+</head>
+<body ng-init="name = 'Michael '">
+    <p>Name : <span ng-bind="name"/></p>
+    <p>Name : {{ name }}</p>
+    <p ng-if="name = 'Michael'">Michael</p>
+
+<!--   <p ng-if="hour < 12">Good morning!</p>
+    <p ng-if="hour > 12">Good afternoon!</p>
+    <p ng-show="hour > 12">Good afternoon!</p>
+    ng show exist but may not appear
+    <p>HOUR = <span ng-bind="hour" /> </p>
+    <p>HOUR = <span ng-bind="hour + 1" /> </p>
+    <p>Hours = {{ hour }} </p> --> 
+</body>
+</html>
