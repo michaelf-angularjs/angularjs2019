@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app = "myCtrlApp">
+<head>
+    <title>My First App</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="timeCtrl.js"></script>
+    <script src="nameCtrl.js"></script>
+</head>
+<body>
+    <div ng-controller="timeCtrl">
+        <h1>Current Time</h1>
+        <h1>{{time}}</h1>
+        <button ng-click="getCurrent()">Get current time</button>
+    </div>
+
+    <div ng-controller="nameCtrl">
+        <h1>Name Swap</h1>
+        <h1>{{name}}</h1>
+        <button ng-click="swapName()">swap the name</button>
+    </div>
+</body>
+</html>
