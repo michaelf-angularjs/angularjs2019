@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="formCtrl.js"></script>
+    <link rel = "stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <p>Hello World!</p>
+    <h1>welcome</h1>
+    <div ng-controller = "formCtrl">
+        <p>Name : <input ng-model="person1.name" type="text" id="nameTxt"></p>
+        <p>Age  : <input ng-model="person1.age" type="number" id="age"></p>
+        <p>Password  : <input ng-model="person.password" type="password" id="pass"></p style =>
+        <input ng-model="person1.gender" type="radio" name="gender" value="male" id="Male"> Male<br>
+        <input ng-model="person1.gender" type="radio" name="gender" value="female" id="Female"> Female<br>
+        <input ng-model="person1.gender" type="radio" name ="gender" value="other" id="Other"> Other
+    <br><br>
+
+<select id="car">
+        <option value="volvo">Volvo</option>
+        <option value="Mitsubishi">Mitsubishi</option>
+        <option value="Honda">Honda</option>
+        <option value="Ford">Ford</option>
+      </select>
+      <br>
+
+<br>
+<input type="checkbox" id="vehicle1" value="Bike"> I have a bike<br>
+<br>
+    <button class = "name1"  ng-click="FormCtrl()">Click Me!</button>
+</div>
+</body>
+</html>
