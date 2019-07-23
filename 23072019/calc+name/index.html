@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Calculator</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+    <script src="childCtrl.js"></script>
+    <script src="brotherCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+        <p >Name:<input ng-model="name">-- alerts if Name == Michael</p>
+            <p><input ng-model="x" type="number">
+            <select ng-model="operand">
+                <option value = "+">+</option>
+                <option value = "*">*</option>
+                <option value = "/">/</option>
+                <option value = "-">-</option>
+            </select>
+            <input ng-model="y" type="number">
+        </p>
+        <div ng-controller="childCtrl">
+           <p ng-model = "result" >Result = {{result}}</p>
+        </div>
+    </div>
+    <div ng-controller="brotherCtrl">
+      <button ng-click="BrotherCtrl()">Click</button>
+    </div>
+    
+    <br>
+</body>
+</html>
