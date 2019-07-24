@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Modules</title>
+    <script src="angular.js"></script>
+
+    <!-- dependency module -->
+    <script src="mysecondmodule.js"></script>
+    <script src="my3rdmodule.js"></script>
+    <script src="my4thmodule.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+    </div>
+
+    <div ng-controller="HelloController as h">
+        <p>{{h.message}}</p>
+    </div>
+    <div ng-controller="HelloController2 as h2">
+        <p>{{h2.message}}</p>
+    </div>
+    <div ng-controller="HelloController3 as h3">
+        <p>{{h3.message}}</p>
+    </div>
+
+    
+    <br>
+</body>
+</html>
