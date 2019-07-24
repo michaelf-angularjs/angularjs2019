@@ -30,7 +30,7 @@
                 <td>{{m.model}}</td>
                 <td>{{m.color}}</td>
                 <td>{{m.price}}</td>
-                <td><button>X</button></td>
+                <td><button ng-click = "remove($index)">X</button></td>
             </tr>
         </table>
 
@@ -39,7 +39,7 @@
             <p>COLOR = <input ng-model ="color" type="text"/></p>
             <p>PRICE = <input ng-model ="price" type="text"/></p>
         </div>
-        <button ng-click="addDevice()">Add Device</button>
+        <button id="add" ng-click="addDevice()">Add Device</button>
         <p>ID = <input ng-model="index" type="text"/></p>
         <button ng-click="updateDevice()">Update Device</button>
 

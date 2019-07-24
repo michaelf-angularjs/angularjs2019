@@ -2,10 +2,11 @@ module.controller("brotherCtrl", BrotherCtrl)
 
 function BrotherCtrl($scope, $rootScope) {
 
-    $scope.num = $rootScope.devices.length-1
-    $scope.$watch('$rootScope.phones',function(){
+    $rootScope.num = $rootScope.devices.length-1
+    $scope.$watch('addDevice()',function(newNum){
 
-            $scope.num++
+        newNum = $rootScope.devices.length
+        $scope.num = newNum
     
     })
 

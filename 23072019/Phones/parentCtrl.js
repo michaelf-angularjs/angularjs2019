@@ -17,12 +17,15 @@ function ParentCtrl($scope, $rootScope) {
         $scope.devices[$scope.index] = {model: $scope.model, color: $scope.color, price: $scope.price}
     }
 
+    $scope.remove = function(i){
+        $scope.devices.splice(i,1)
+    }
+
     $scope.valueBy = 'model'
-    $scope.reverse = 'true'
+    $scope.reverse = true   
     $scope.sortBy = function(value){
         $scope.valueBy = value
-        if($scope.reverse == 'true'){
-            $scope.reverse = 'false'
+        $scope.reverse = false
     }
-    }
+    
 }
