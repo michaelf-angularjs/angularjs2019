@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Services are life</title>
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="const.service.js"></script>
+    <script src="value.service.js"></script>
+    <script src="factory.service.js"></script>
+    <script src="service.service.js"></script>
+
+    <script src="input.ctrl.js"></script>
+    <script src="sum.ctrl.js"></script>
+    <script src="b.ctrl.js"></script>
+    <script src="a.ctrl.js"></script>
+    <script src="div.ctrl.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+    <div ng-controller = "inputCtrl">
+        <p>Enter numbers a and b:</p>
+        <p>a = <input ng-model = "a1" type = "number" ></p>
+        <p>b= <input ng-model = "b1" type = "number"></p>
+        <input type = "radio" name = "color" ng-model = "greenandyellow">green/yellow<br>
+        <input type = "radio" name = "color" ng-model = "blueandbrown">blue/brown<br>
+    </div>
+    <div ng-controller = "sumCtrl">
+        <p>a + b = {{sum}}</p>
+    </div>
+    <div ng-controller = "aCtrl">
+        <p>a = {{myArray}}</p>
+    </div>
+    <br>
+</body>
+</html>
