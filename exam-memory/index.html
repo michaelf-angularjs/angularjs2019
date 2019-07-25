@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Exam - Memory Game</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="parentCtrl.js"></script>
+    <script src="resultsCtrl.js"></script>
+
+</head>
+<body >
+
+    <div ng-controller="parentCtrl">
+
+        <table border="1">
+
+            <tr ng-repeat="n in numbers track by $index">
+                <p ng-show ="showArray">The numbers will disappear in 3 seconds</p>
+                <td ng-show ="showArray">{{n}}</td>
+                <td><button ng-hide="showArray" ng-click="show($index)">choose</button></td>
+                
+            </tr>
+            <tr>
+            <td>Current choice: {{showNum}}</td>
+            <td>Last choice: {{lastChoice}}</td>
+        </tr>
+        </table>
+    </div>
+    <div ng-controller= "resultsCtrl">
+        <p>Corrects: {{correct}}</p>
+        <p>Guesses: {{guesses}}</p>
+    </div>
+    
+    <br>
+</body>
+</html>
